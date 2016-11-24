@@ -3,7 +3,7 @@
 <head>
 	<title> GeauxTutors</title>
 	<meta charset="utf-8">
-	<base href="/home.html"> 
+	<base href="/register.html"> 
 
 	<!-- Set default to 100% screen size -->
 	<meta name="viewport" content="width-device-width, initial-scale=1">
@@ -25,7 +25,16 @@
 	h3 {
 		text-align: center;
 	}
+	div.reg {
+		text-align:center 
+		width:300px;
+		padding:20px;
+		border:5px solid gold;
+		margin:50px
+	}
 	</style>
+
+
 </head>
 
 <body>
@@ -35,7 +44,7 @@
 			<strong>
 				<font color="#400080">
 				<font size="12pt">
-				GeauxTutors - Tutoring Home 				
+				GeauxTutors - Registration 				
 				</font>
 				</font>
 			</strong>
@@ -43,41 +52,56 @@
 	</div>
 		<div class = "row">
 			<div class="col-md-10" style="background-color: #400080"><!--Purple-->
-				<font color="white">
+				<font color="grey">
 				<font size="4pt">
 				<p>
-					<ul></br>
-					 	<h2><strong>We offer tutoring in courses such as:</br></h2></strong>
-						<li>Accounting</br></li>
-						<li>Anthropology</br></li>
-						<li>Biology</br></li>
-						<li>Chemistry</br></li>
-						<li>Chemical Engineering</br></li>
-						<li>Civil Engineering</br></li>
-						<li>Communication Studies</br></li>
-						<li>Economics</br></li>
-						<li>Electrical Engineering</br></li>
-						<li>English</br></li>
-						<li>Experimental Statistics</br></li>
-						<li>Finance</br></li>
-						<li>French</br></li>
-						<li>History</br></li>
-						<li>ISDS</br></li>
-						<li>Kinesiology</br></li>
-						<li>Math</br></li>
-						<li>Mechanical Engineering</br></li> 
-						<li>Physics</br></li>
-						<li>Political Science</br></li>
-						<li>Psychology</br></li>
-						<li>Sociology</br></li>				
-					</ul>					
-				</p>
-				<p>
-					<strong>If you are interested in receiving assistance from one of our tutors, please 
-					<a href="/register.html">Register</a> to send us your information, or visit our 
-					<a href="https://www.facebook.com/lsututors">Facebook Page</a>
-					for an alternate method of sending your information.</strong>
-				</p>
+					</br>
+					 	<h1>Registration Form</h1>
+						<div class="reg">
+							<form action="/Servlet1/RegisterUser" method="post">
+							<!--"RegistrationController" method="post">-->
+								<table style="width: 100%">
+									<tr></br>
+										<td>Full Name</td>										
+										<td><input type="text" name="fullname" /></td>										
+									</tr>
+									<tr>
+										<td>Phone</td>
+										<td><input type="text" name="phone" /></td>
+									</tr>
+									<tr>
+										<td>Email</td>
+										<td><input type="text" name="email" /></td>
+									</tr>									
+								</table>
+								</br>
+								<div class="checkbox">
+									<label>
+										<h4><strong>By checking this box to complete registration, you are affirming that:</strong></h4>
+										<input type="checkbox" value="understood" />										 
+										<h4>"I have read and understand the policies as written on the 
+										<a href="/policy.html">Policies</a>  
+										page. I agree with the policies and will abide by those policies for as long as I retain
+										servies from GeauxTutors."</h4>
+									</label>
+								</div>
+								<input type="submit" value="student registration" />
+								</br></br>
+								<div class="checkbox">
+									<label>
+										<h4><strong></strong></h4>
+										<input type="checkbox" value="understood" />										 
+										<h4>"I want to become an individual contracted tutor for GeauxTutors"</h4>
+									</label>
+								</div>
+								<input type="submit" value="tutor registration" />
+							</form>
+						</div>	
+
+
+							
+					</br>
+				</p>				
 				</font> 
 				</font>
 			</div>
@@ -111,8 +135,10 @@
 				Contact Us </a>
 				</br></br>
 				</font>
-			</div>		
+			</div>
+		
 	</div>
+
 </body>
 
 </html>
