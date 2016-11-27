@@ -4,16 +4,13 @@
 	<title> GeauxTutors</title>
 	<meta charset="utf-8">
 	<base href="/home.html"> 
-
 	<!-- Set default to 100% screen size -->
 	<meta name="viewport" content="width-device-width, initial-scale=1">
-	
 	<!-- Importing Bootstrap libraries -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 	<!-- CSS formatting -->
 	<style>
 	h1 {
@@ -45,6 +42,15 @@
 			<div class="col-md-10" style="background-color: #400080"><!--Purple-->
 				<font color="white">
 				<font size="4pt">
+				<div style="text-center">
+					<h3>
+						We are all students dedicated to teaching others the techniques that have led us to success. All of us have 
+						taken the classes we tutor, and passed with high marks. A deeper understanding of the material covered is the force
+						that drives most of us to revisit this material.</br></br>"By teaching, we learn more" is the motto of our 
+						tutors, and we stand by that philosophy.</br></br>After registering, you will be contacted by a tutor, and can 
+						book your first tutoring session.</br>
+					</h3>
+				</div>			
 				<p>
 					<ul></br>
 					 	<h2><strong>We offer tutoring in courses such as:</br></h2></strong>
@@ -76,7 +82,7 @@
 					<strong>If you are interested in receiving assistance from one of our tutors, please 
 					<a href="/register.html">Register</a> to send us your information, or visit our 
 					<a href="https://www.facebook.com/lsututors">Facebook Page</a>
-					for an alternate method of sending your information.</strong>
+					to view some information about our tutors.</strong>
 				</p>
 				</font> 
 				</font>
@@ -100,19 +106,27 @@
 				</br></br>
 				<a href="/tips.html">
 				Tips</a>
-				</br></br>
-				<a href="/about.html">
-				About Us</a>
-				</br></br>
+				</br></br>				
 				<a href="https://www.facebook.com/lsututors">
 				Facebook Page </a>
 				</br></br>
 				<a href="mailto:geauxtutors@gmail.com">
 				Contact Us </a>
 				</br></br>
+				<!-- create login here -->				
+				Administrator:
+				</br>
+				<div class="log">
+							<form action="/Servlet1/AdminLogin" method="post">
+								User Name:<input type="text" name="username" size="15" />										
+								Password:<input type="text" name="password" size="15" />
+								</br></br>
+								<input type="submit" value="Login" />
+								</br></br>								
+							</form>
+						</div>						
 				</font>
 			</div>		
 	</div>
 </body>
-
 </html>
