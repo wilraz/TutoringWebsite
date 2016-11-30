@@ -1,10 +1,14 @@
+
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.DriverManager;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
@@ -46,7 +50,7 @@ public class RegisterTutor extends HttpServlet {
 	        //loading drivers for mysql
 	        Class.forName("com.mysql.jdbc.Driver");
 		    //creating connection with the database 
-	        con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/webDB","root","");
+	        con=(Connection) DriverManager.getConnection("jdbc:mysql://35.160.31.195:3306/webDB","root","");
 	        ps=(PreparedStatement) con.prepareStatement("insert into tutor values(?,?,?,?)");
 	        ps.setString(1, name);
 	        ps.setString(2, email);
@@ -61,6 +65,14 @@ public class RegisterTutor extends HttpServlet {
         catch(Exception se)
         {
             se.printStackTrace();
-        }	
+        }
+        String docType = "<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">\n";
+		out.println(docType +
+		"<html\n" +
+		"<head><title>Tutor Registration</title></head>\n" +
+		"<body>\n" +
+        "</br></br><a href='http://www.geauxtutors.com/home.html'>" +
+        "Return to GeauxTutors Home page</a>" +
+		"</body></html>");
       }		
 }

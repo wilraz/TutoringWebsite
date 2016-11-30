@@ -1,4 +1,5 @@
 
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -46,8 +47,7 @@ public class TutorPull extends HttpServlet {
 				
 		// JDBC driver name and database URL
 		String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-		//String DB_URL = "jdbc:mysql://52.26.86.130:3306/testDB";
-		String DB_URL = "jdbc:mysql://localhost:3306/webDB";
+		String DB_URL = "jdbc:mysql://35.160.31.195:3306/webDB";
 		// Database credentials
 		String USER = "root";
 		String PASS = "";
@@ -81,7 +81,7 @@ public class TutorPull extends HttpServlet {
 		String docType = "<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">\n";
 		out.println(docType +
 		"<html\n" +
-		"<head><title>Tutor retrieval</title></head>\n" +
+		"<head><title>Tutor Retrieval</title></head>\n" +
 		"<body>\n" +
 		"<ul>\n" +
 		" <li><b>Tutor name</b>: " + name + "\n" +
@@ -89,6 +89,10 @@ public class TutorPull extends HttpServlet {
 		" <li><b>Tutor phone</b>: " + phone + "\n" +
 		" <li><b>Tutor subject</b>: " + subject + "\n" + 
 		"</ul>\n" +
+		"<a href='http://www.geauxtutors.com/ji02Td5aR1v8xAS5Ph590lgds21rc45aq1SeRf43CFSQ895lh.html'>" +
+		"Return to GeauxTutors Admin page</a>" +
+		"</ul>\n" +
 		"</body></html>");			
 	}
 }
+

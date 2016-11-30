@@ -22,6 +22,13 @@
 	h3 {
 		text-align: center;
 	}
+	.reg {
+		text-align:center
+	}
+	.checkdis {
+		text-align:left
+	}
+
 	</style>
 </head>
 <body>
@@ -45,44 +52,44 @@
 				<p>
 					</br>
 					 	<h1>Student Query</h1>
-						<h3>Search for a specific student by name</h3>
-						<div class="reg">
-							<form action="/Servlet1/UserPull" method="post">
-								<table style="width: 100%">
-									<tr></br>
-										<td>Name</td>										
-										<td><input type="text" name="name" /></td>										
-									</tr>																
-								</table>
-								</br>
-								<input type="submit" value="search students"  />
-								</br></br>								
+						<h3>Search for a specific student by name</br>
+						Please make sure you enter the full first and last name.</h3>
+						<div class="reg">							
+							<form class="form-inline" action="/Servlet1/UserPull" method="post">
+								<div class="form-group">
+									<label class="sr-only">Student</label>									
+								</div>
+								<div class="form-group">
+									<label for="inputname" class="sr-only">Student</label>
+									<input type="text" class="form-control" name="name" placeholder="Student Name">
+								</div>
+								<button type="submit" class="btn btn-warning">Search</button>
 							</form>
-						</div>						
+						</div></br>						
 				</p>	
 				<p>
 					</br>
 					 	<h1>Tutor Query</h1>
-						<h3>Search for a specific tutor by name</h3>
+						<h3>Search for a specific tutor by name</br>
+						Please make sure you enter the full first and last name.</h3>
 						<div class="reg">
-							<form action="/Servlet1/TutorPull" method="post">
-								<table style="width: 100%">
-									<tr></br>
-										<td>Name</td>										
-										<td><input type="text" name="name" /></td>										
-									</tr>																
-								</table>
-								</br>
-								<input type="submit" value="search tutors"  />
-								</br></br>								
+							<form class="form-inline" action="/Servlet1/TutorPull" method="post">
+								<div class="form-group">
+									<label class="sr-only">Tutor</label>									
+								</div>
+								<div class="form-group">
+									<label for="inputname" class="sr-only">Tutor</label>
+									<input type="text" class="form-control" name="name" placeholder="Tutor Name">
+								</div>
+								<button type="submit" class="btn btn-warning">Search</button>
 							</form>
-						</div>						
+						</div></br>												
 				</p>	
-				<h1>Student Dump</h1>
+				<h1>Student List</h1>
 					<div class="reg">
 						<form action="/Servlet1/UserDump" method="post">
 							<div class="checkbox">
-									<label>										
+									<label class="checkdis">										
 										<input type="checkbox" value="understood" id="check1"/>	
 										<h4><strong>I wish to see all students currently registered</strong></h4>
 									</label>
@@ -92,11 +99,11 @@
 					</div></br>
 				</p>
 				<p>
-				<h1>Tutor Dump</h1>
+				<h1>Tutor List</h1>
 					<div class="reg">
 						<form action="/Servlet1/TutorDump" method="post">
 							<div class="checkbox">
-									<label>										
+									<label class="checkdis">										
 										<input type="checkbox" value="understood" id="check2"/>										 
 										<h4><strong>I wish to see all tutors currently registered</strong></h4>
 									</label>

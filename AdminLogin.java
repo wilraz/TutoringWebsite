@@ -1,10 +1,9 @@
 
+
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.DriverManager;
 
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -41,12 +40,11 @@ public class AdminLogin extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-		String DB_URL = "jdbc:mysql://localhost:3306/webDB";
+		String DB_URL = "jdbc:mysql://35.160.31.195:3306/webDB";
 		String n1 = request.getParameter("username");
 		String n2 = request.getParameter("password");
 		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();		  
-
+	
 		try  {
 			Class.forName(JDBC_DRIVER);
 		    Connection con = (Connection) DriverManager.getConnection(DB_URL,"root","");
@@ -58,7 +56,7 @@ public class AdminLogin extends HttpServlet {
 		    //ServletRequest session = null;
 
 		    if(rs.next()) {
-		         response.sendRedirect("/ji02Td5aR1v8xAS5.html");	    
+		         response.sendRedirect("/ji02Td5aR1v8xAS5Ph590lgds21rc45aq1SeRf43CFSQ895lh.html");	    
 		         //session.setAttribute("userSession", "loggedin");
 		    }   
 		    else  {
@@ -69,3 +67,5 @@ public class AdminLogin extends HttpServlet {
 		}
 	}		
 }
+
+
